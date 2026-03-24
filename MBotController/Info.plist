@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Required privacy usage descriptions -->
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>MBot Controller uses Bluetooth to connect to and drive your mBot Ranger robot.</string>
+
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>MBot Controller uses Bluetooth to connect to and drive your mBot Ranger robot.</string>
+
+	<key>NSMotionUsageDescription</key>
+	<string>MBot Controller reads the accelerometer, gyroscope, and magnetometer to enable tilt-based driving and to display sensor data.</string>
+
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>MBot Controller displays live GPS coordinates, speed, and heading on the sensor dashboard.</string>
+
+	<key>NSCameraUsageDescription</key>
+	<string>MBot Controller shows a live camera view from the robot's perspective with a sensor data overlay.</string>
+
+	<!-- App transport & background -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+	</array>
+
+	<!-- Supported interface orientations (iPhone) -->
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+
+	<!-- Supported interface orientations (iPad) -->
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+
+	<key>UILaunchScreen</key>
+	<dict/>
+</dict>
+</plist>
