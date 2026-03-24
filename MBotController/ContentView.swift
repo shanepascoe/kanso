@@ -11,21 +11,25 @@ struct ContentView: View {
                 .tabItem { Label("Control", systemImage: "gamecontroller.fill") }
                 .tag(0)
 
+            NavigationView { CodeEditorView() }
+                .tabItem { Label("Code", systemImage: "chevron.left.forwardslash.chevron.right") }
+                .tag(1)
+
             NavigationView { SensorDashboardView() }
                 .tabItem { Label("Sensors", systemImage: "waveform.path.ecg") }
-                .tag(1)
+                .tag(2)
 
             NavigationView { CameraView() }
                 .tabItem { Label("Camera", systemImage: "camera.fill") }
-                .tag(2)
+                .tag(3)
 
             NavigationView { ConnectView() }
                 .tabItem { Label("Connect", systemImage: "dot.radiowaves.left.and.right") }
-                .tag(3)
+                .tag(4)
         }
         // Persistent "not connected" banner on all non-connect tabs
         .overlay(alignment: .top) {
-            if !bleManager.isConnected && tab != 3 {
+            if !bleManager.isConnected && tab != 4 {
                 Button { tab = 3 } label: {
                     HStack(spacing: 6) {
                         Circle().fill(.red).frame(width: 8, height: 8)
